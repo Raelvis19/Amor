@@ -235,7 +235,7 @@ button { cursor: pointer; }
   position: absolute;
   z-index: 2;
   left: 9vw;
-  top: 50%;
+  top: 36%;
   transform: translateY(-50%);
   width: min(680px, 70vw);
   will-change: transform, opacity;
