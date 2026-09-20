@@ -89,7 +89,7 @@ const scenes: Scene[] = [
     description:
       "Sé que la confianza que me tenías no se va a recuperar de la noche a la mañana, pero estoy dispuesto a hacer todo lo que sea necesario para demostrarte que estoy arrepentido de corazón. Estoy dispuesto a ser un mejor hombre del que era, estoy dispuesto a darte todo lo que necesitas, a hacer que te sientas segura, a responder por ti si en algún momento sientes angustia, y a que te sientas igual o más segura que al principio de la relación. 🕊️",
     image:
-      "/images/IMG_8688.JPG",
+      "/images/IMG_8688.jpg",
   },
   {
     number: "09",
@@ -98,7 +98,7 @@ const scenes: Scene[] = [
     description:
       "Sonnifer, aunque ahora mismo tú no me lo creas, tú me salvaste. Eres la persona más importante en mi vida, la persona con la que veo proyectos a futuro, la mujer con la que me quiero casar, la madre de mis hijos. Tú eres mi todo, tú eres la mujer que amo, y no sé qué haría sin ti. Nunca me voy a cansar de pedirte perdón ni de demostrarte día a día que sé el valor y el tamaño de lo que hice, y que estoy dispuesto a asumir las consecuencias y a ser un buen hombre para ti. 💍",
     image:
-      "/images/IMG_8874.JPG",
+      "/images/IMG_8874.jpg",
   },
   {
     number: "10",
