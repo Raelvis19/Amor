@@ -98,7 +98,7 @@ const scenes: Scene[] = [
     description:
       "Sonnifer, aunque ahora mismo tú no me lo creas, tú me salvaste. Eres la persona más importante en mi vida, la persona con la que veo proyectos a futuro, la mujer con la que me quiero casar, la madre de mis hijos. Tú eres mi todo, tú eres la mujer que amo, y no sé qué haría sin ti. Nunca me voy a cansar de pedirte perdón ni de demostrarte día a día que sé el valor y el tamaño de lo que hice, y que estoy dispuesto a asumir las consecuencias y a ser un buen hombre para ti. 💍",
     image:
-      "/images/IMG_8874.jpg",
+      "/images/IMG_8874.jpg", //cambios
   },
   {
     number: "10",
