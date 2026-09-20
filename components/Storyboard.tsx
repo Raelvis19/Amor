@@ -1,13 +1,7 @@
- "use client";
+"use client";
 
 import Image from "next/image";
-import {
-  motion,
-  useMotionValue,
-  useMotionValueEvent,
-  useTransform,
-  type MotionValue,
-} from "motion/react";
+import { motion, useMotionValue, useMotionValueEvent, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 type Scene = {
@@ -29,47 +23,91 @@ const scenes: Scene[] = [
   {
     number: "01",
     eyebrow: "EL COMIENZO",
-    title: "Todo comienza con una historia.",
+    title: "Todo comienza con un mensaje en tiktok.",
     description:
-      "Una imagen. Un instante. Y la sensación de que algo está a punto de suceder.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=90",
+      "Un 23 de septiembre de 2025 el destino cruzaría nuestros caminos y comenzaría nuestra historia con un hola, que parecía un simple saludo pero que luego significaría mucho más. 💌",
+    image: "/images/1-primer-mensaje1.jpg",
   },
   {
     number: "02",
     eyebrow: "EL CAMINO",
-    title: "Cada paso cambia la perspectiva.",
+    title: "Comenzamos a conocernos.",
     description:
-      "El paisaje se transforma mientras avanzamos. La historia no se detiene.",
+      "Comenzaron las cenas y las salidas y ambos empezamos a conocernos. Y yo, desde ese primer momento, sabía que no eras una chica del montón: tu aura, tu risa, tu manera de ser comenzó a moverme de una manera que nunca había sentido antes, y ahí comenzó a crecer el amor. 🌹",
     image:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2400&q=90",
+      "/images/IMG_4786.JPG",
   },
   {
     number: "03",
     eyebrow: "EL DESCUBRIMIENTO",
     title: "Entonces aparece algo inesperado.",
     description:
-      "Un lugar que parece sacado de otra historia y que merece ser contado.",
+      "Pasaban los meses y nuestro amor crecía. Nos tratábamos lindo, teníamos gestos lindos el uno por el otro, hablábamos mucho, nos juntábamos, hacíamos cosas juntos y lo nuestro creció a un ritmo increíble, pero por falta de comunicación, en diciembre de 2025 tuvimos que alejarnos. 💔",
     image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2400&q=90",
+      "/images/inesperado.JPG",
   },
   {
     number: "04",
     eyebrow: "EL MOMENTO",
     title: "Hay momentos que se quedan contigo.",
     description:
-      "La luz cambia, el ruido desaparece y por unos segundos todo encaja.",
+      "Empieza el 2026 y las cosas no van muy bien. Hablamos esporádicamente, muere tu abuela y tu situación anímica no está como para pensar en otras cosas, pero aun así seguimos en comunicación y no nos alejamos el uno del otro durante ese periodo; nos dimos apoyo mutuamente siempre que uno necesitaba del otro en algún momento difícil. 🤍",
     image:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2400&q=90",
+      "/images/goida.JPG",
   },
   {
     number: "05",
-    eyebrow: "EL FINAL",
-    title: "Y toda historia deja ganas de volver.",
+    eyebrow: "LA RECONCILIACIÓN",
+    title: "Una Historia que no podía Terminar.",
     description:
-      "Esto es solo el comienzo. La siguiente escena todavía está por escribirse.",
+      "Llega julio, el mes de mi cumpleaños, y empezamos a hablar como nunca. El amor que había estado cultivándose todo ese tiempo empezó a salir: una Sonnifer cambiada, dispuesta a amar, empieza a confiar en mí y me ama de una manera que yo nunca había sentido antes, y me hace sentir el hombre más amado e importante del mundo. De una vez por todas, luego de tanto luchar, al fin estábamos juntos. 💖",
     image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90",
+      "/images/IMG_7533.JPG",
+  },
+  {
+    number: "06",
+    eyebrow: "EL AMOR VERDADERO",
+    title: "Una Historia, Un Amor.",
+    description:
+      "Después de tanto, por fin estábamos viviendo un amor bonito, bello, limpio y sano, como el que siempre quisimos tener. Te convertiste en mi oración contestada: todas esas lágrimas que había derramado pidiéndole a Dios habían sido escuchadas, porque tú tienes todas las cosas que yo necesito y que pedí con tanta fe. ✨",
+    image:
+      "/images/IMG_8629.JPG",
+  },
+  {
+    number: "07",
+    eyebrow: "LA EQUIVOCACIÓN",
+    title: "Lo que no debía pasar.",
+    description:
+      "Sin justificación alguna cometí una estupidez y la cagué: rompí tu corazón y jodí toda la confianza que tenías en mí. Sin necesidad, te fallé a ti, a tu familia y hasta a Dios, cometiendo ese error, porque tú fuiste la mujer que tanto le pedí que me enviara. 😔",
+    image:
+      "/images/snoopy.jpg",
+  },
+  {
+    number: "08",
+    eyebrow: "EL PERDÓN",
+    title: "La Redención.",
+    description:
+      "Sé que la confianza que me tenías no se va a recuperar de la noche a la mañana, pero estoy dispuesto a hacer todo lo que sea necesario para demostrarte que estoy arrepentido de corazón. Estoy dispuesto a ser un mejor hombre del que era, estoy dispuesto a darte todo lo que necesitas, a hacer que te sientas segura, a responder por ti si en algún momento sientes angustia, y a que te sientas igual o más segura que al principio de la relación. 🕊️",
+    image:
+      "/images/IMG_8688.JPG",
+  },
+  {
+    number: "09",
+    eyebrow: "EL AMOR",
+    title: "Te Amo con mi vida, Sonnifer.",
+    description:
+      "Sonnifer, aunque ahora mismo tú no me lo creas, tú me salvaste. Eres la persona más importante en mi vida, la persona con la que veo proyectos a futuro, la mujer con la que me quiero casar, la madre de mis hijos. Tú eres mi todo, tú eres la mujer que amo, y no sé qué haría sin ti. Nunca me voy a cansar de pedirte perdón ni de demostrarte día a día que sé el valor y el tamaño de lo que hice, y que estoy dispuesto a asumir las consecuencias y a ser un buen hombre para ti. 💍",
+    image:
+      "/images/IMG_8874.JPG",
+  },
+  {
+    number: "10",
+    eyebrow: "LA OPORTUNIDAD",
+    title: "El último baile.",
+    description:
+      "Sonnifer, aunque ahora mismo no estoy en posición de pedirte nada, vamos a darle una última oportunidad a lo nuestro: después de haber llegado hasta aquí, de haber luchado tanto para que se diera de ambas partes y de que tú pudieras abrirte conmigo, con lo difícil que es eso, yo no quería que te sintieras usada ni que sintieras que te vi la cara. Dame la oportunidad de cumplir todas las cosas que te he prometido y de ser el esposo que te acompañe a lo largo de tu vida. 💞",
+    image:
+      "/images/IMG_8788.JPG",
   },
 ];
 
@@ -219,40 +257,8 @@ function CinematicStory({ onActive }: { onActive: (index: number) => void }) {
           <span key={scene.number} className={index === 0 ? "current-dot" : ""} />
         ))}
       </div>
-
-      <DebugHud progress={progress} />
     </section>
   );
-}
-
-function DebugHud({ progress }: { progress: MotionValue<number> }) {
-  const [info, setInfo] = useState("JS: loading…");
-
-  useEffect(() => {
-    (window as unknown as { __appReady?: boolean }).__appReady = true;
-    let raf = 0;
-    let errs: string[] = [];
-    const onErr = (e: ErrorEvent) => errs.push(e.message.slice(0, 40));
-    window.addEventListener("error", onErr);
-
-    const tick = () => {
-      setInfo(
-        `BUILD v5 | JS ok | H=${window.innerHeight}x${window.innerWidth} P=${progress
-          .get()
-          .toFixed(3)} y=${Math.round(window.scrollY)} err=${
-          errs.length ? errs.join(";") : "none"
-        }`
-      );
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("error", onErr);
-    };
-  }, [progress]);
-
-  return <div className="debug-hud">{info}</div>;
 }
 
 export default function Storyboard() {
@@ -267,9 +273,8 @@ export default function Storyboard() {
     <main>
       <header className="topbar">
         <a className="logo" href="#top">
-          STORY<span>.</span>
+          R&S<span>.</span>
         </a>
-        <span className="build-tag">v5</span>
         <div className="counter">
           <strong>{String(active + 1).padStart(2, "0")}</strong>
           <span>/ {String(scenes.length).padStart(2, "0")}</span>
@@ -292,15 +297,14 @@ export default function Storyboard() {
       <section className="hero" id="top">
         <div className="hero-grid" />
         <div className="hero-content">
-          <p className="eyebrow">A CINEMATIC STORYBOARD</p>
+          <p className="eyebrow">Sonnifer y Raelvis 💞</p>
           <h1>
-            Una página.
+            Lo que una vez fue un Mensaje en Tiktok.
             <br />
-            <em>Una historia.</em>
+            <em>Hoy es una Historia.</em>
           </h1>
           <p className="hero-copy">
-            Desplázate para descubrir una secuencia de escenas conectadas por
-            imágenes, movimiento y texto.
+            Desplázate para descubrir un poquito de nuestra Historia Juntos.
           </p>
           <button className="start" onClick={() => goToScene(0)}>
             Comenzar <span>↓</span>
@@ -317,8 +321,8 @@ export default function Storyboard() {
       </div>
 
       <footer className="ending">
-        <p className="eyebrow">THE END</p>
-        <h2>La siguiente historia es tuya.</h2>
+        <p className="eyebrow">THE END 🕊️</p>
+        <h2>Eres mi niña y siempre lo serás, te amo con todas las fuerzas de mi corazón. 💗</h2>
         <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           Volver al inicio ↑
         </button>
